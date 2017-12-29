@@ -1,0 +1,89 @@
+
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 400px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.box input{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    outline: none;
+}
+ul{
+
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+ul li {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-bottom: 1px solid #2e6da4;
+}
+ul li span{
+    display: block;
+
+}
+ul li span:first-child{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #333333;
+    margin-top: 8px;
+    border-radius: 50%;
+    float: left;
+    cursor: pointer;
+}
+ul li span:nth-of-type(2){
+    height: 100%;
+    width: auto;
+    line-height: 30px;
+    float: left;
+}
+ul li span:nth-of-type(3){
+    height: 100%;
+    width: auto;
+    line-height: 30px;
+    float: right;
+    cursor: pointer;
+}
+.btn{
+    width: 400px;
+    height: 30px;
+    margin: 20px auto 0px;
+    overflow: hidden;
+
+}
+.btn button{
+    height: 80%;
+    width: auto;
+    float: right;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 5px;
+}
+.none{
+    width: 400px;
+    margin: 0 auto;
+}
+.red{
+    color: red;
+}
+
+.red1{
+    background-color: #333333;
+}
+input{
+    width: 100%;
+    height: 100%;
+}

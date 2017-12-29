@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+<div id="root">
+    <div class="box">
+        <input type="text" @keydown.13="add()" v-model="con" placeholder="请输入内容">
+    </div>
+    <div class="btn">
+        <button @click="changeStatus(0)" :class="{red:status=='0'}">未完成</button>
+        <button @click="changeStatus(1)" :class="{red:status=='1'}">完成</button>
+        <button @click="changeStatus('all')" :class="{red:status=='all'}">全部</button>
+    </div>
+    <ul>
+        <li v-show="all.length>0" v-for="item in datas">
+            <div v-if="item.edit" @dblclick="edit(item)">
+                <span @click="changeState(item)" :class="{red1:item.state==1}"></span>
+                <span> &nbsp;&nbsp;{{item.title}}</span>
+                <span @click="del(item.id)">删除</span>
+            </div>
+            <div v-else>
+                <input type="text" v-model="item.title" @blur="edit(item)">
+            </div>
+
+        </li>
+    </ul>
+    <div v-show="all.length==0" class="none">没有数据</div>
+</div>
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
